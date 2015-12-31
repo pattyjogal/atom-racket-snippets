@@ -13,11 +13,12 @@
   },
   "dependencies": {
   },
+
   "providedServices": {
-  "autocomplete.provider": {
-    "versions": {
-      "2.0.0": "provide"
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
     }
   }
-}
 }
