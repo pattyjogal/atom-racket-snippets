@@ -7,8 +7,7 @@ module.exports =
   getSuggestions: (req) ->
     console.log  req
     {prefix} = req
-    if req.prefix == ""
-      console.log "You typed a paren!"
+    if req.prefix.substring(prefix.length) is "" or  req.prefix.substring(prefix.length) is "("
       @getRacketFunctions()
   onDidInsertSuggestion: ({editor, suggestion}) ->
     console.log "Suggestion"
@@ -17,18 +16,19 @@ module.exports =
   triggerAutocomplete: (editor)  ->
     atom.commands.dispatch(atom.views.getView(editor), 'autocomplete-plus:activate', activatedManually: false)
   loadCompletions: ->
-    console.log "completions loaded"
     @completions = {}
     fs.readFile path.resolve(__dirname, '..', 'completions.json'), (error, content) =>
+      console.log JSON.parse(content)
       @completions = JSON.parse(content) unless error?
       return
   getFunctions: (f) ->
     f = @completions.functions[f]
   getRacketFunctions: (prefix) ->
-    completions = []
-    for f in @completions.functions
-      completions.push(@buildRacketFunctionCompletion(f))
-    completions
+    c = []
+    console.log @completions.functions
+    for f of @completions.functions
+      c.push(@buildRacketFunctionCompletion(f))
+    c
   buildRacketFunctionCompletion: (f) ->
     console.log "fns built"
     text: f

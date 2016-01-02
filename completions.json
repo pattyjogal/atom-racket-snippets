@@ -2,7 +2,11 @@
   "functions": {
     "image-height": {
       "arguments": ["image"]
+    },
+    "image-width": {
+      "arguments": ["image"]
     }
+
   }
 
 }
