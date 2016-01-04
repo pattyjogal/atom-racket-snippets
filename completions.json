@@ -5,6 +5,9 @@
     },
     "image-width": {
       "arguments": ["image"]
+    },
+    "above":{
+      "arguments": ["image", "image"]
     }
 
   }

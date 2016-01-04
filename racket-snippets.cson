@@ -1,0 +1,9 @@
+'.source.racket':
+  'Cond Statement':
+    prefix: 'cond'
+    body: """
+    (cond
+      [${1:conditon} ${2:expression}]
+      [else ${3:expression}]
+    )$4
+    """

@@ -2,7 +2,7 @@ fs = require 'fs'
 path = require 'path'
 console.log "Workin!"
 module.exports =
-  selector: '.text.html'
+  selector: '.source.racket'
   filterSuggestion: true
   getSuggestions: (req) ->
     console.log  req
@@ -12,7 +12,7 @@ module.exports =
   onDidInsertSuggestion: ({editor, suggestion}) ->
     console.log "Suggestion"
     setTimeout(@triggerAutocomplete.bind(this, editor), 1)
-
+    atom.commands.dispatch(atom.views.getView(editor), 'snippets:expand')
   triggerAutocomplete: (editor)  ->
     atom.commands.dispatch(atom.views.getView(editor), 'autocomplete-plus:activate', activatedManually: false)
   loadCompletions: ->
@@ -34,3 +34,4 @@ module.exports =
     text: f
     type: 'function'
     description: "Racket #{f} function"
+#Remember, I found the master thread of racket stuff in blueboxes.rktd
