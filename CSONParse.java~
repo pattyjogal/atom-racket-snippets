@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.ArrayList;
+public class CSONParse {
+
+  public static void readFile(String filename)throws FileNotFoundException, IOException{
+    boolean nextLine = false;
+    ArrayList<String> functions = new ArrayList<String>();
+     try (BufferedReader br = new BufferedReader(new FileReader(filename))){
+       for (String line; (line = br.readLine()) != null; ) {
+          if (line.contains("Function")){
+            nextLine = true;
+          }else if (nextLine) {
+            nextLine = false;
+            functions.add(line);
+          }else{
+            nextLine = false;
+          }
+       }
+       System.out.println(functions);
+     }
+  }
+
+  public static void main(String[] args) throws FileNotFoundException, IOException{
+    String path = "C:\\Program Files\\Racket\\doc\\deinprogramm\\blueboxes.rktd";
+    path = path.replace("\\", "/");
+    readFile(path);
+    File file =  new File(path);
+    System.out.println(file.exists() + "hello");
+  }
+}
