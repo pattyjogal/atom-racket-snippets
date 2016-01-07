@@ -2,7 +2,7 @@ fs = require 'fs'
 path = require 'path'
 console.log "Workin!"
 module.exports =
-  selector: '.source.html'
+  selector: '.source.nofile'
   filterSuggestion: true
   getSuggestions: (req) ->
     console.log  req

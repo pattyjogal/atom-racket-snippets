@@ -1,12 +1,14 @@
 {
-  "name": "racket-autocomplete",
-  "main": "./lib/racket-autocomplete",
-  "version": "0.0.0",
-  "description": "A short description of your package",
+  "name": "racket-snippets",
+  "main": "./lib/racket-snippets",
+  "version": "1.0.0",
+  "description": "Snippets for Racket!",
   "keywords": [
+    "racket",
+    "snippets"
   ],
 
-  "repository": "https://github.com/atom/racket-autocomplete",
+  "repository": "https://github.com/atom/racket-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

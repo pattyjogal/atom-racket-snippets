@@ -1,2 +1,0 @@
-SET FILNM=%1
-ECHO %FILNM:~0,-5%
