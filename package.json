@@ -1,7 +1,7 @@
 {
   "name": "racket-snippets",
   "main": "./lib/racket-snippets",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Snippets for Racket!",
   "keywords": [
     "racket",
