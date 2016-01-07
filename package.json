@@ -1,21 +1,18 @@
 {
   "name": "racket-snippets",
   "main": "./lib/racket-snippets",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Snippets for Racket!",
   "keywords": [
     "racket",
     "snippets"
   ],
-
   "repository": "https://github.com/pattyjogal/atom-racket-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
